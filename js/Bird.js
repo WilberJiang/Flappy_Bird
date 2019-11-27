@@ -47,5 +47,7 @@ class Bird {
     this.changeY = 6;
     this.rotate = -1.2;
     this.status = "up";
+    document.getElementById("wing").load();
+    document.getElementById("wing").play();
   }
 }

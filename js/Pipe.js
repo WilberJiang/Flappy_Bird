@@ -4,8 +4,7 @@ class Pipe {
     this.h = game.allImg["pipe_down"].height;
     this.h1 = Math.round(Math.random() * 200 + 100);
     this.space = 140;
-    this.h2 =
-      game.canvas.height - game.land.h - this.h1 - this.space;
+    this.h2 = game.canvas.height - game.land.h - this.h1 - this.space;
     this.x = game.canvas.width;
     this.speed = 1;
     this.done = true;
@@ -35,6 +34,8 @@ class Pipe {
     if (this.done && game.bird.x1 > this.x2) {
       game.score++;
       this.done = false;
+      document.getElementById("point").load();
+      document.getElementById("point").play();
     }
   }
   render() {
